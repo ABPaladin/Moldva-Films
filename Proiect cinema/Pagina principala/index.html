@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MoldovaFilm</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 <body>
     <header>
@@ -29,42 +30,128 @@
                 <button class="pressed">EN</button>
             </div>        
             <div class="sites">
-                <button id="facebook"></button>
-                <button id="telegram"></button>
-                <button id="instagram"></button>
+                <button class="facebook"></button>
+                <button class="telegram"></button>
+                <button class="instagram"></button>
             </div>        
         </div>
     </header>
     <main>
         <div class="container">
             <div id="movie-slider">
-                <button id="slider-btn-left"></button>
-                <div>
-                    <div class="slider-movie-image"></div>                    <div class="slider-movie-image"></div>
-                    <div class="slider-movie-image"></div>
-                    <div class="slider-movie-image"></div>
-                    <div class="slider-movie-image"></div>
-                    <div class="slider-movie-image"></div>
-                    <div class="slider-movie-image"></div>
-                    <div class="slider-movie-image"></div>
-                    <div class="slider-movie-image"></div>                    <div class="slider-movie-image"></div>
-                    <div class="slider-movie-image"></div>
-                    <div class="slider-movie-image"></div>
-                    <div class="slider-movie-image"></div>
-                    <div class="slider-movie-image"></div>
-                    <div class="slider-movie-image"></div>
-                    <div class="slider-movie-image"></div>
-                    <div class="slider-movie-image"></div>
+                <i id="icon-left" class="fa-solid fa-angle-left"></i>
+                <div id="parent-slider">
+                    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRLeDZOOOe39EylZoDSJteMkbX8lqS4JT-SvEZ8W2M6s1DRBZMd" alt="Top Gun: Maverick"/>
+                    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR0QB4n-P1v3Q-W0tsIIbf9sxE7hNBfELZ9ixHnbQYbR22hMbJ9" alt="Aftersun"/>
+                    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQnDm2i_Hj23pOvoApmbTD4HLZSBYYGfJsJ0DcKsXHPXz_yF1Ao" alt="Everything Everywhere All at Once"/>
+                    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRicca1uD1bCkKQF3FqdlhTpxRnsetHxLWfQPXU8B1Mt-uqXYHr" alt="Psycho"/>
+                    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQUFm2Id2_xXf2tOYcVpfZiX1iox0eOS09BZqt3JipuWpSou4XJ" alt="Dr. Strangelove"/>
+                    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS6MveoDoJOg9-wMvtHE4ak_-HDZeYS1egb9PwRcf8lhrtcppMc" alt="Spirited Away"/>
+                    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSmGggtpJ4TX3aN3PUaVWUgNODHespRPvKYAyhGUAZSqSOmPiEm" alt="Avatar: The Way of Water"/>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIgJp_ZoMufqDS17oo_fxOplO6W34XXM_LTpjQGyxAXEdxXwpH" alt="Nope"/>
+                    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRBTroKIU3vBzixwr-8F_ePdw5sqPLjRcf5t6Mj9hCU4wVUQV5e" alt="Guillermo del Toro's Pinocchio"/>
+                    <img src="https://contentserver.com.au/assets/598411_p173378_p_v8_au.jpg" alt="The Dark Knight"/>
+                    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSzNzI5w3iKM-KdasCDvlOEUgD2ojlf7IW5b-e3tqFmhW2JRSCz" alt="Black Panther: Wakanda Forever"/>
+                    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQWBwBL2qotJhEhaHN7xyDakLxVctlWhGk_VifuQZRrf04Jg-Od" alt="Toy Story 3"/>
+                    <img src="https://www.dreamworks.com/storage/cms-uploads/puss-in-boots-the-last-wish-poster-thumbnail2.jpg" alt="Puss in Boots: The Last Wish"/>
                 </div>
-                <button  id="slider-btn-right"></button>
+                <i id="icon-right" class="fa-solid fa-angle-right"></i>
             </div>
         </div>
         <div class="container">
-
+            <div id="poster-slider">
+            <div class="slider">
+                <div class="slides">
+                    <!--radio button start-->
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+                    <input type="radio" name="radio-btn" id="radio5">
+                    <input type="radio" name="radio-btn" id="radio6">
+                    <input type="radio" name="radio-btn" id="radio7">
+                    <!--radio button end-->
+                    <!--slide image start-->
+                    <div class="slide first">
+                        <img src="https://thumbnails.cbsig.net/CBS_Production_Entertainment_VMS/2022/10/26/2091444291941/TGMAV_SAlone_16_9_1920x1080_1781067_1920x1080.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="https://i.ytimg.com/vi/9c3MsB3-f-I/maxresdefault.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="https://i.ytimg.com/vi/efeEqhnyKWw/maxresdefault.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="https://cdn.theplaylist.net/wp-content/uploads/2022/09/24081237/GUILLERMO-DEL-TORO_PINOCCHIO_.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="https://www.theinspireone.com/wp-content/uploads/2022/11/scale.jpeg">
+                    </div>
+                    <div class="slide">
+                        <img src="https://img.hulu.com/user/v3/artwork/51782fbb-ae1d-46b5-a7a5-d23457b8e09a?base_image_bucket_name=image_manager&base_image=2214731e-2e67-4d55-810f-5cd4d726e7ed&size=1200x630&format=jpeg">
+                    </div>
+                    <div class="slide">
+                        <img src="https://www.dreamworks.com/storage/cms-uploads/pib2-share-image-dec-21.jpg">
+                    </div>
+                    <!--slide image end-->
+                    <!--automatic navigation start-->
+                    <div class="navigationAuto">
+                        <div class="autoBtn1"></div>
+                        <div class="autoBtn2"></div>
+                        <div class="autoBtn3"></div>
+                        <div class="autoBtn4"></div>
+                        <div class="autoBtn5"></div>
+                        <div class="autoBtn6"></div>
+                        <div class="autoBtn7"></div>
+                    </div>
+                    <!--automatic navigation end-->
+                </div>
+                <!--manual navigation start-->
+                <div class="navigationManual">
+                    <label for="radio1" class="manualBtn"></label>
+                    <label for="radio2" class="manualBtn"></label>
+                    <label for="radio3" class="manualBtn"></label>
+                    <label for="radio4" class="manualBtn"></label>
+                    <label for="radio5" class="manualBtn"></label>
+                    <label for="radio6" class="manualBtn"></label>
+                    <label for="radio7" class="manualBtn"></label>
+                </div>
+                <!--manual navigation end-->
+            </div>
+            <!--image slider end-->
+            </div>
         </div>
-
     </main>
-    <footer></footer>
 
+
+    <footer>
+        <div class="mini-container">
+            <div class="logo footer-logo">MoldovaFilm</div>
+            <span id="copy-span">&copy; Toate drepturile înregistrate.</span>
+            <div class="sites footer-sites">
+                <button class="facebook"></button>
+                <button class="telegram"></button>
+                <button class="instagram"></button>
+            </div>
+        </div>
+        <div class="mini-container">
+            <nav id="footer-nav">
+                <a href="#">Contacte</a>
+                <a href="#">Filme</a>
+                <a href="#">Cinematografe</a>
+                <a href="#">Noutăți</a>
+            </nav>
+        </div>
+        <div class="mini-container">
+            <span>Acceptăm:</span>
+            <div class="cards">
+                <div class="mastercard"></div>
+                <div class="visa"></div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="app.js"></script>
 </body>
 </html>

@@ -2,10 +2,10 @@
 
 
 :root {
-    --color-1: #273e47;
+    --color-4: #273e47;
     --color-2: #bd632f;
     --color-3: #d8973c;
-    --color-4: #d8c99b;
+    --color-1: #d8c99b;
     --color-5: #a4243b;
 }
 
@@ -24,6 +24,8 @@ body {
 
 
 
+
+
 /*HEADER STYLE*/
 
 header {
@@ -33,14 +35,22 @@ header {
     position: sticky;
     background-color: var(--color-1);
     width: 100%;
-    height: 80px;
-    color: var(--color-3);
+    height: 100px;
+    color: var(--color-2);
+    border-bottom: 10px solid var(--color-2);
+    border-top: 10px solid var(--color-2);
 }
 
 
 .logo {
     font-size: 31px;
     font-weight: 900;
+    cursor: pointer;
+    transition: 0.6s ease;
+}
+
+.logo:hover {
+    color: var(--color-5);
 }
 
 .header-btns {
@@ -58,19 +68,31 @@ nav {
 }
 
 nav a {
-    color: var(--color-3);
+    color: var(--color-2);
     text-decoration: none;
+    cursor: pointer;
+    transition: 0.6s ease;
+    
+}
+
+nav a:hover {
+    color: var(--color-5);
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--color-5);
+    padding: 5px;
 }
 
 .btn-login button,
 .language button{
-    border: 2px solid var(--color-3);
+    border: 2px solid var(--color-2);
     background: none;
     color: var(--color-3);
     border-radius: 50px;
     padding: 5px 8px;
     font-size: 17px;
     font-weight: 300;
+    cursor: pointer;
+    transition: 0.6s ease;
 }
 
 .language button {
@@ -79,16 +101,18 @@ nav a {
     font-size: 12px;
 }
 
-/*
-.pressed {
-    background-color: var(--color-3);
+.btn-login button:hover {
     color: var(--color-5);
 }
-*/
 
-#facebook {
+.language button:hover {
+    color: var(--color-5);
+}
+
+
+.facebook {
     background: none;
-    background-image: url('./images/facebook.png');
+    background-image: url('./images/icons/facebook.png');
     background-position: center;
     background-size: cover;
     width: 28px;
@@ -96,9 +120,9 @@ nav a {
     border: none;
 }
 
-#telegram {
+.telegram {
     background: none;
-    background-image: url('./images/telegram.png');
+    background-image: url('./images/icons/telegram.png');
     background-position: center;
     background-size: cover;
     width: 28px;
@@ -106,14 +130,31 @@ nav a {
     border: none;
 }
 
-#instagram {
+.instagram {
     background: none;
-    background-image: url('./images/instagram.png');
+    background-image: url('./images/icons/instagram.png');
     background-position: center;
     background-size: cover;
     width: 28px;
     height: 28px;
     border: none;
+}
+
+@media screen and (max-width: 1000px) {
+    header {
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .logo {
+        padding-bottom: 10px;
+    }
+
+    nav {
+        padding-bottom: 15px;
+    }
 }
 
 
@@ -124,32 +165,395 @@ nav a {
 
 /*MAIN STYLE*/
 
+
+
+
+
+
+/*First container*/
+
 .container {
     width: 80%;
     height: max-content;
-    margin:10px auto ;
-}
-
-#movie-slider {
-    width: 100%;
-    height: 280px;
-    background-color: var(--color-1);
-    margin: 30px auto;
+    margin:30px auto ;
+    white-space: nowrap;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-.slider-movie-image {
-    width: 200px;
-    height: 250px;
-    background-color:red;
-    margin-left: 10px;
-    margin-right: 10px;
+#movie-slider {
+    max-width: 1200px;
+    background-color: var(--color-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border: 10px solid var(--color-2);
+    border-radius: 30px;
+    position: relative;
+}
+#movie-slider i {
+    background: var(--color-3);
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50%;
+    font-size: 20px;
+    position: absolute;
+    cursor: pointer;
+    transition: 0.6s ease;
 }
 
-#movie-slider button {
-    width: 20px;
-    height: 20px;
+#movie-slider i:hover {
+    background: var(--color-5);
+}
+
+#movie-slider i:first-child {
+    left: -130px;
+}
+#movie-slider i:last-child {
+    right: -130px;
+}
+
+#movie-slider #parent-slider {
+    white-space: nowrap;
+    cursor: pointer;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+#parent-slider img {
+    height: 340px;
+    object-fit: cover;
+    margin-left: 15px;
+    width: calc(100% / 5.5);
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 1500px) {
+    #movie-slider i:first-child {
+        left: -120px;
+    }
+    #movie-slider i:last-child {
+        right: -120px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    #movie-slider i:first-child {
+        left: -80px;
+    }
+    #movie-slider i:last-child {
+        right: -80px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #movie-slider i:first-child {
+        left: -50px;
+    }
+    #movie-slider i:last-child {
+        right: -50px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #movie-slider i:first-child {
+        left: -35px;
+    }
+    #movie-slider i:last-child {
+        right: -35px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #movie-slider i:first-child {
+        left: -20px;
+    }
+    #movie-slider i:last-child {
+        right: -20px;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    #movie-slider i:first-child {
+        left: -1px;
+    }
+    #movie-slider i:last-child {
+        right: -1px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    #parent-slider img {
+        width: calc(100% / 4.4);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #parent-slider img {
+        width: calc(100% / 3.3);
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #parent-slider img {
+        width: calc(100% / 2.2);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #parent-slider img {
+        width: calc(100% / 1.1);
+    }
+}
+
+@media screen and (max-width: 370px) {
+    #parent-slider img {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    #movie-slider {
+        padding: 20px;
+    }
+}
+
+
+
+
+
+
+
+/*Second Container*/
+
+#poster-slider {
+    max-width: 1200px;
+    background-color: var(--color-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 100px;
+    border: 10px solid var(--color-2);
+    border-radius: 30px;
+    position: relative;
+}
+
+.slider {
+    width: 1000px;
+    height: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.slides {
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img {
+    background-position: center;
+    background-size: cover;
+    width: 1000px;
+    height: 600px;
+}
+
+/*css manual slide navigation*/
+
+.navigationManual {
+    position: absolute;
+    width: 1000px;
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+.manualBtn {
+    border: 2px solid var(--color-5);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manualBtn:not(:last-child) {
+    margin-right: 80px;
+}
+
+.manualBtn:hover {
+    background: var(--color-5);
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+#radio2:checked ~ .first {
+    margin-left: -20%;
+}
+#radio3:checked ~ .first {
+    margin-left: -40%;
+}
+#radio4:checked ~ .first {
+    margin-left: -60%;
+}
+#radio5:checked ~ .first {
+    margin-left: -80%;
+}
+#radio6:checked ~ .first {
+    margin-left: -100%;
+}
+#radio7:checked ~ .first {
+    margin-left: -120%;
+}
+
+/*css for automatic navigation*/
+
+.navigationAuto {
+    position: absolute;
+    display: flex;
+    width: 1000px;
+    justify-content: center;
+    margin-top: 620px;
+}
+
+.navigationAuto div{
+    border: 2px solid var(--color-5);
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigationAuto div:not(:last-child) {
+    margin-right: 80px;
+}
+
+#radio1:checked ~ .navigationAuto .autoBtn1 {
+    background: var(--color-5);
+}
+#radio2:checked ~ .navigationAuto .autoBtn2 {
+    background: var(--color-5);
+}
+#radio3:checked ~ .navigationAuto .autoBtn3 {
+    background: var(--color-5);
+}
+#radio4:checked ~ .navigationAuto .autoBtn4 {
+    background: var(--color-5);
+}
+#radio5:checked ~ .navigationAuto .autoBtn5 {
+    background: var(--color-5);
+}
+#radio6:checked ~ .navigationAuto .autoBtn6 {
+    background: var(--color-5);
+}
+#radio7:checked ~ .navigationAuto .autoBtn7 {
+    background: var(--color-2);
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .slider {
+        width: 700px;
+        height: 450px;
+    }
+
+    .slide img {
+        width: 700px;
+        height: 450px;
+    }
+
+    .manualBtn {
+        border: 2px solid #3a5a40;
+    }
+
+    .navigationAuto div {
+        border:2px solid #3a5a40;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+/*FOOTER STYLE*/
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: sticky;
+    background-color: var(--color-1);
+    width: 100%;
+    height: 180px;
+    color: var(--color-2);
+    border-bottom: 10px solid var(--color-2);
+    border-top: 10px solid var(--color-2);
+}
+
+.footer-sites{
+    padding-top: 20px;
+}
+
+.footer-logo {
+    padding-bottom: 20px;
+}
+
+#footer-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#footer-nav a {
+    padding: 7px;
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 20px;
+}
+
+.visa {
+    background: none;
+    background-image: url('./images/icons/visa.png');
+    background-position: center;
+    background-size: cover;
+    width: 35px;
+    height: 35px;
+    border: none;
+}
+
+.mastercard {
+    background: none;
+    background-image: url('./images/icons/mastercard.png');
+    background-position: center;
+    background-size: cover;
+    width: 35px;
+    height: 35px;
+    border: none;
 }
